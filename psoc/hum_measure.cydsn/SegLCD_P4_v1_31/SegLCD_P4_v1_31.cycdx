@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="us-ascii"?>
+
+<deviceData version="1"
+  xmlns="http://cypress.com/xsd/cydevicedata"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://cypress.com/xsd/cydevicedata cydevicedata.xsd">
+
+  <block name="`$INSTANCE_NAME`" desc="" visible="true">
+
+    <register name="DIVIDER" address="CYREG_LCD_DIVIDER" bitWidth="32" 
+        desc="The bits in LCD_DIV_CONFIG are used to configure both HS generator and LS generator. Note that the LS
+              generator will use only the lower 8 bits of each fields and ignore the upper 8.">
+        <field name="SUBFR_DIV" from="15" to="0" access="RW" 
+               desc="Input clock frequency divide value, to generate the 1/4 sub-frame period. 
+                     The sub-frame period is 4*(SUBFR_DIV+1) cycles long.">            
+        </field>
+        <field name="DEAD_DIV" from="31" to="16" access="RW" 
+               desc="Length of the dead time period in cycles. When set to zero, no dead time period exists.">            
+        </field>        
+    </register>
+    
+    <register name="CONTROL" address="CYREG_LCD_CONTROL" bitWidth="32"
+        desc="The same bits in LCD_CONTROL are used to configure both HS generator and LS generator.">
+        <field name="LS_EN" from="0" to="0" access="RW" desc="Low speed (LS) generator enable">
+            <value name="disable" value="0" desc="Low speed (LS) generator disable" />
+            <value name="enable" value="1" desc="Low speed (LS) generator enable" />
+        </field>
+        <field name="HS_EN" from="1" to="1" access="RW" desc="High speed (HS) generator enable">
+            <value name="disable" value="0" desc="High speed (HS) generator disable" />
+            <value name="enable" value="1" desc="High speed (HS) generator enable" />
+        </field>
+        <field name="LCD_MODE" from="2" to="2" access="RW" desc="HS/LS Mode selection">
+            <value name="LS" value="0" desc="Select Low Speed (32kHz) Generator (Works in Active and DeepSleep power modes)." />
+            <value name="HS" value="1" desc="Select High Speed (system clock) Generator (Works in Active power mode only)." />
+        </field>
+        <field name="TYPE" from="3" to="3" access="RW" desc="LCD driving waveform type configuration.">
+            <value name="TYPE_A" value="0" desc="Each frame addresses each COM pin only once with a balanced (DC=0) waveform." />
+            <value name="TYPE_B" value="1" desc="Each frame addresses each COM pin twice in sequence with a positive and negative waveform that together are balanced (DC=0)." />
+        </field>
+        <field name="OP_MODE" from="4" to="4" access="RW" desc="Driving mode configuration">
+            <value name="PWM" value="0" desc="PWM Mode" />
+            <value name="CORRELATION" value="1" desc="Digital Correlation Mode" />
+        </field>
+        <field name="BIAS" from="6" to="5" access="RW" desc="PWM bias selection">
+            <value name="HALF" value="0" desc="1/2 Bias" />
+            <value name="THIRD" value="1" desc="1/3 Bias" />
+        </field>
+        <field name="COM_NUM" from="11" to="8" access="RW" desc="The number of COM connections minus 2.">
+        </field>
+        <field name="LS_EN_STAT" from="31" to="31" access="R" desc="LS enable status bit.">
+        </field>
+    </register>
+    
+    <register name="DATA00" address="CYREG_LCD_DATA00" bitWidth="32"
+        desc="Pin data for COM1..COM4 for port 0.">
+        <field name="DATA" from="31" to="0" access="RW" 
+               desc="Bits [4i+3:4i] represent the pin data for pin [i] for COMS 1-4 (COM1 is lsb).">            
+        </field>      
+    </register>
+    <register name="DATA01" address="CYREG_LCD_DATA01" bitWidth="32"
+        desc="Pin data for COM1..COM4 for port 1.">
+        <field name="DATA" from="31" to="0" access="RW" 
+               desc="Bits [4i+3:4i] represent the pin data for pin [i] for COMS 1-4 (COM1 is lsb).">            
+        </field>      
+    </register>
+    <register name="DATA02" address="CYREG_LCD_DATA02" bitWidth="32"
+        desc="Pin data for COM1..COM4 for port 2.">
+        <field name="DATA" from="31" to="0" access="RW" 
+               desc="Bits [4i+3:4i] represent the pin data for pin [i] for COMS 1-4 (COM1 is lsb).">            
+        </field>      
+    </register>
+    <register name="DATA03" address="CYREG_LCD_DATA03" bitWidth="32"
+        desc="Pin data for COM1..COM4 for port 3.">
+        <field name="DATA" from="31" to="0" access="RW" 
+               desc="Bits [4i+3:4i] represent the pin data for pin [i] for COMS 1-4 (COM1 is lsb).">            
+        </field>      
+    </register>
+    <register name="DATA04" address="CYREG_LCD_DATA04" bitWidth="32"
+        desc="Pin data for COM1..COM4 for port 4.">
+        <field name="DATA" from="31" to="0" access="RW" 
+               desc="Bits [4i+3:4i] represent the pin data for pin [i] for COMS 1-4 (COM1 is lsb).">            
+        </field>      
+    </register>
+    
+  </block>
+</deviceData>

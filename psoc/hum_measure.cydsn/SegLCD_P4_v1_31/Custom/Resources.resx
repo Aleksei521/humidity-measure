@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PARAMETERS_LOADING_ERROR_MSG" xml:space="preserve">
+    <value>Error in Helpers parameter.</value>
+  </data>
+  <data name="LOAD_TEMPLATE_ERROR_MSG" xml:space="preserve">
+    <value>Unable to load the alphabet.</value>
+  </data>
+  <data name="PAGE_TITLE_BASIC" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="imsave" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAqhJREFUOE99kt1P
+        klEcx/mP8qqt5UVpL5Il2LCcWKYYQio1TMSXClBzOpCVpKJuIKZipTLlRctm4kZpugSWDS9szS23fONC
+        SC7y2+85TyNYWxff53vO7znfz/mdnSOQt8wG5C2vQf5HqeNUcfW0f24AAoFMPwO7ZxPuwA94P+xgbmUX
+        /uA+3n8+wNJ6lGn5S7pezX+DTO+LMsCth27kKodQrrHCaAvBaA/ysgVhIjfZ1sjXqEZOtXJNP1tPuQQD
+        FDdMweH7CqmqC619KzD0LEPfs5QmQzeJ6gYal9b0YZA65nIMUKiZgHUyggJFJ7RmP2qN75LSJMcLyVqx
+        yoJ+Wl9YN8EDJOqX6BwOQiRrR1XzLBR6HypInCv0Xt51f2sSpRkWZwgS9QseIL47ipb+JeQUG1DSMAkp
+        dZSu8bT5ldI2mByryKccA+RVPUdj1wKyrj1AgXoMYtUI8qtHyEchJmdj5vz8otSAxwMB5FUO84BcpQP3
+        jW9xWlyH3rFVDIx/+q/OShqh616gm3DwAGHFINTtPoiILmK7jDIXUQfMU8T94zpseDIHoSIFUNk6jVwq
+        nJF2IiO7Eiey7vyjjHPVuFDWS+uGoDHNgMsxAPcolIYpCOV2nBTWwDrkQywWQzQaxd7eHhIJ7r0Az2we
+        nLpcz4LqDi97TAwgVjlx+5GLWrIjM68Bu/sH5FqSBi6XCx6PB8fHxzg6SiBLYmBnryFA8hau147H5fpp
+        5NPZsguaEYlEkClqQonKysJ+vx8bkQ3Efx7h0g0zrt5zos78BpTjATebpjKVrd5fUu0Ezhe2YXFxkUB6
+        qHVOFg6HQtje/o7DwzhEpRYUaV2ofzoPyvEA7lNumMmQ6Tw7OUUdCIbXaWc3Hw6HsbW1hXgsjsDHCERl
+        FtBako/zTQCC3xI5t1n8QADhAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="imarrowleft" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAXhJREFUOE+lkEtL
+        gkEYhd30L/oHQSXmNx8ZCGKQUYTYxQIRK7AWWW1qUVEQUmaKZaGZ3SUNQ2pRYJnRhS6bkiCSCKHa9hOC
+        00y2+JQp0BYPA2fmnHfeIwPwL7hiIXDFQuCKhcAVGcaQSA/+nRSu2EbNLZtFBrRuifj4fIJ+vYgANpWZ
+        TzNBNK6IqF8mqFsiqPURaBYJ1F6CmnkB1R6BPs8LaP4xX76GcJD2YOt+BL4bG9wXVtiTFowfmTB82AFL
+        RAvilgSEU44Sw0bWfP0WRfzZj+3UBDUPwHXeA/tJJ8biJgzuG2AOa9EQJFDM5v2gaVWE86Idxy9B7DxM
+        YeHKhtG4AX17teiOqmEMEejXCHQBga4iQD6jzA1g6AIE0cchOM+60BtToXRMDq1fjtEEQeCuEbF0P5IZ
+        L27fd1ExzQlgsKImE1aYI+J3UWxXpUuAwpmdWulQopyay6aq6HNOAEM1R40uTU5Rf8EVBTZVUtRfcEWG
+        tKjfgewLcMnNNp0P1HwAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="imimport" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAcNJREFUOE+VkdtL
+        VFEUxs//E2KZnnO8ZyhKlFcw7QL14JuBvomXh8lMaxxNxxycrLRGpzJF1EJBU5DAhMlxMnxq6EFLehZS
+        EX6uLRzhnDM+zMMP9v72txfrW0sDXJg9OundOpeeZpD6JIMLnYp0eXJ7XYIi65lOfH+Nl5GHTGwFmN4e
+        Sa5ATr/O2GYnbQv3Gfz6iNbP9aRIF06fwiUo8v2G1jJfbdMkiu1ukVC8+twgT7pQUXSfzmWvzkWZhdOn
+        cAmKwoDBn4Moi/FRQpsdvI60k+ZNokDxkMHa7hTN82XUTWTTOFN+uhWnT+ESFNdeGNrO/4jWOFegNcwU
+        ad6VB5pESehNKN4YNikJGqgoVwYMcvp0zN4kOih7ZSId4Fu9x5vvHt5HfWTLQJ0+xdnhbjiT2jGT6rcm
+        lSOmDHGDDz86mN0OEFxvIle2kildWFtxFVDcliJ7hzG+xIMs/Rpm9XdYCvjpWrlD/XQudR+zjp1RbAUU
+        t8ZN9o5ibPz9RGR3lnDMg2exlIa5fPL8hljsftvFQkX5d/STbzuThKJNPF6uoEgG6vQpXIJFTUg6kTjv
+        Yq1cl6043y0SihY3ZaBVo+d/BrQTKIvFfBTOGvYAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="WRITE_FILE_ERROR_MSG" xml:space="preserve">
+    <value>Unable to write to the file.</value>
+  </data>
+  <data name="HELPERS_LIMIT_MSG" xml:space="preserve">
+    <value>Maximum number of helpers is {0:G}.
+ Helper could not be added.</value>
+  </data>
+  <data name="imadd" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAitJREFUOE+lkd1L
+        U3EcxvdHFFjUqKQobR33cl625cy9HkfYLDZaFhQUTmdmsxdrNbSXLUvdmqZtNYoyKnAOhC6s0C6MWARe
+        qDdZtMHCXGETai0qns453cXpYnTx/C4enufz+35/PwmA/5KouS9WE9h7k805oywc182zuwZMzWI5XqJm
+        PVcu/PyKH78K+PxtAbY+46xYjpeo6YxaMP3hKV5mRvE8lcD2kD4nluMlanJj49m7exh7HcPITB/Ynuri
+        ADuvmRCfCWJoyo9o0gfD5ap/A7gHC9XfYL/vjlhgHzSDL+8IGxBJnkZo0oNL483Q+SuhOb8VZIcG8rMM
+        Np+ishtPkJ0CgC8vFT5iMT+PzNIcpucnMf5mGIGJRnQ+OQTfYxdepCYw9T6Jt5/mkP2ygPRiCqUeZVYA
+        8DffeuXlbnPjzJgdraNWNCVq4E7UonGkDq64HQ3DThx44IDjjg2WiAl0rxbSI3JhLQk3dr7tEYuDcTX2
+        P1Rjz301HHcZ2G7TsMYYGCM0qgZoaMI0yCAF4gqJsgskVrqJjACo6zf21IYNeWtQD3P3Nui7dKjkdjZH
+        aVQP0tByxfJ2ChuOq7DOo4C0RY4VXHm5S+YVAPzxt5hzWuj6KTBXKSi7hXJx36jyqUH2/hm33K/C2qOK
+        4gCEl4asS4VNF7myT4HVLRXFAcpOkrnSDiWkXjlK2giUNBFpsRwvUXP9MWVgTasit+pwBVfekl7WIGsX
+        ywGQ/AaJZaVBSeVSRwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="CHARS_RESET_MSG" xml:space="preserve">
+    <value>Are you sure you want to reset all changes?</value>
+  </data>
+  <data name="INFORMATION_MSG_TITLE" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="SAVE_CHARS_TITLE" xml:space="preserve">
+    <value>Save a Template File</value>
+  </data>
+  <data name="NOT_UNIQUE_NAME_MSG" xml:space="preserve">
+    <value>The name {0} is not unique. Enter another name.</value>
+  </data>
+  <data name="WARNING_MSG_TITLE" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="imdelete" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6
+        JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAACXBIWXMAAAsMAAALDAE/QCLIAAACLUlE
+        QVQ4T52TvY/ScBjHuVIRKHA9JAgnL+VoC7TX0kLLS6EvFBTa0uj5J7gYF+PsfpOTMrg4ORgHY+LCYJwc
+        TYyJiYuDLu7GxHgxd/Hnr5fA8TZcrsmnzfN9nufTNPnVBwDw2ZYljGzr3ciyTNu2EC87L75eb+DvD67f
+        hU9g9vt/HNs5cMaOf9Owohro7YNbe8PhjfuzzBOgkDuabk6bbRXoxuBkNLIeus6yhKyIwY5umo5tHxmG
+        +Wwu8G5QkIa0jN5gqnR1oOkGuOk6b1x3jHl9uaWGhpb1UtXNY1luPmJ4KbIkmAElAcgD3egfa5oJxq77
+        oq3ovKJoE7XbBbwoTWhG2F7cWRJ4dFR1S9fNCvykT41mB9TqjSOxXvtJM9zrYokLrc4vFYtUBcngq9Lf
+        tqICvlr7RhQr8U1za4FHXZIIurT/mePFf1AEJLkFGJb7uml2LRBrcp4us1+g4KRcYV8lkmkplyenglgH
+        VIm9tzq/VJRZLpUlih9yBQrAt79Pp3bjkVgM244nsPwe/VQQ6r8pRsgu7pwtC61grkA/T10r/NrnxB8s
+        V2VmvQiOB0MhLMZVxY/pDPEkU6DnZ2Qu2M0STjJFAIpmAUmXD0NY9PQMzEBRPwJzkiSp71F8J1/ipNMj
+        f9rE8XggkUgexq9cBXmi+DYYjtCRGL72T+D4jr/RaE+waFgu8c0zgUcmT9UuBS4/9m0hmh9Fo7N8FXih
+        CIKE5/Vi8yJsDM8P8P0HLGwR4Wl3ICYAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="NOT_ENOUGH_SEG_COM_MSG" xml:space="preserve">
+    <value>Not enough segment and common lines to manage helpers.
+Helper could not be added.</value>
+  </data>
+  <data name="REMOVE_HELPERS_MSG" xml:space="preserve">
+    <value>Remove helper functions first.</value>
+  </data>
+  <data name="PAGE_TITLE_POWERSETTINGS" xml:space="preserve">
+    <value>Driver Power Settings</value>
+  </data>
+  <data name="FORMAT_INT_ERROR_MSG" xml:space="preserve">
+    <value>The value should be an integer between {0:G} and {1:G}.</value>
+  </data>
+  <data name="OPEN_FILE_ERROR_MSG" xml:space="preserve">
+    <value>Unable to open the file.</value>
+  </data>
+  <data name="NUMLINES_DECREASE_MSG" xml:space="preserve">
+    <value>Decreasing the number of common or segment lines will cause
+the loss of pixel mapping information for removed lines</value>
+  </data>
+  <data name="imarrowright" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAY1JREFUOE+lkNsr
+        g2Ecx3fjz/AXKKx5n+fFasUmlFNzXLlwilyMXEg5pMScJmPaHLbMHLKJcKGt9V5scrhBSkQhbv0J6ut9
+        3jKvd09qufj8np7v0+/T7/npAPwLbpgO3DAduGE6cEM1jZuifPDfGNxQTd2GiIY/JNxQTc26iI/Pe9QH
+        +RKlFMwTGBcITIsURUsUFg9F6TJF+SpFhU+E9OxTJGwadTNDKXSOoD1kxsCJDaPRZoxLLXCedsJzYUfw
+        ehDHDy4kXjcVSa1GohTDLEG1n6J114y+IytGZMmE1ApnvEuW9GL7ZhSRRy/O38KKxBoQsXMzlZEU6KcF
+        lHgJKtcoagMUti2KjrAJ9kMLhiJWuM/sCN06EH1aw2yiCVX+nymUkjMp4PJ9D9KLG/sPPVi5qsBQjMLs
+        1SNzWI/uAyNm4m0I3/WjbIUmm5OCLEcesmVJ7pQANo1hhkBwErDdsAW3hPIxFutUFqxuZvy68GAS6ixG
+        oYvI19T3lEALWzCRp9Hm33BDNexL2uwH6L4AKV3Nc2SbeJ0AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="TIP_PIXELS_DRAG" xml:space="preserve">
+    <value>To assign a pixel, drag it onto the pixel mapping table below.</value>
+  </data>
+  <data name="OPEN_CHARS_TITLE" xml:space="preserve">
+    <value>Open a Template File</value>
+  </data>
+  <data name="imrefresh" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAn9JREFUOE99k11I
+        k2EUxw1hEHgVCIHQrdepc3NzfqwtW+hcudqwNjUiFS2bWRPsQ6n8nq5M05pNnS2/jVJmDr3oyzArdWYD
+        ZWYUMRK886KEf+cZbfYu7eLPy3nec37P+z/nvCEA/tHRFrk6tSmpK6VRsiStj0NCbewHUXX0VUHl/j3B
+        uSElfTqePzjVoYrQtyvHKp8VoG2qDK1TpTA/N+Dy6BkomkWIq4raIEgRB6DvkKG49ySv0K6NKO7N+jw4
+        14jx5Xr0L1xDyysjzvfrobidCGmDAMlmPkR10SCIhgNgKunPmh5bbMfIUjnuvzuOoiEpMlrknrSmZGWK
+        WcKTmuIiyUoRWXETYJUUGgB4f7rwYqUbjuXr6JzT4cZEKnSWVI+m7dBe/01+SWr4PLJiIYA6AFj75cac
+        9zEBKtCzkI+LQxnIsabLg4v/lrAqyvfeB1jfXMH77wOYXGmAdeYcCh5qJoILttEu9gwAXN4RvPxyD49m
+        S309ye8+tpsl5Hapw1i8k3yAnZRrU4cxCIOxeG3zE0fsbLtP21Zky9EzW47pb934+MMBz/qbLQB19b8N
+        y7GqpMZhLYbdl+D01GLqqxXz3idbADYSmq+F5hzYSr+0bYpwfXuap3IynUasx+CiAX2uKxh21XAAoTSW
+        VXFNjDuxTlAoaxBFsnPlHalSffegp3AgGfWvk9D89jBuOrUw9JyYYcWcHhAkU1AdA4mJT2srhLxRDFWr
+        BNl2MQyjQpQ5hTA+lSHPpl49S2t/gdafA/gDYau6EW+KhaxZgPQHAmTahMiyxyPbdgBkxXG688g+fz77
+        ETkAJrISTlYqyMo8WYHiVsIGWRknK7rgXAAhvwGijHmQrswd6wAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="PRINT_TABLE_ERROR_MSG" xml:space="preserve">
+    <value>An error occurred during printing.</value>
+  </data>
+  <data name="CHARS_DIALOG_FILTER" xml:space="preserve">
+    <value>XML Files|*.xml</value>
+  </data>
+  <data name="WRONG_FORMAT_PARAM_MSG" xml:space="preserve">
+    <value>Parameter {0} has wrong format.</value>
+  </data>
+  <data name="PARAMETERS_COMMIT_ERROR_MSG" xml:space="preserve">
+    <value>Error in committing parameter.</value>
+  </data>
+  <data name="PAGE_TITLE_HELPERS" xml:space="preserve">
+    <value>Display Helpers</value>
+  </data>
+  <data name="SAVE_TEMPLATE_ERROR_MSG" xml:space="preserve">
+    <value>Error during XML serialization occured.</value>
+  </data>
+  <data name="CLOCK_XTAL_ERROR" xml:space="preserve">
+    <value>The 32-kHz watch crystal is not enabled and must be active for use by the LCD Timer.</value>
+  </data>
+  <data name="WRONG_SYMBOL_MSG" xml:space="preserve">
+    <value>The name can contain only letters, digits, and '_' symbol.</value>
+  </data>
+  <data name="imdefault" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF/SURBVDhPjZJbcoJAEEXdTLKLZBvy6a+rgAUIIoiy
+        sHy5AqtAHgqijNK5d8BEiFRF6lQ/auYwgz0RkT+EYSjb7bZjIxuyCSQIAlmTdYBl7drRzbfbbYxs7ftY
+        +kLAzbvdTgtEGjztr2ECGCnwXwnCbSj7/V6uqsZxN3LH6uZ+Bw3yLgIKPM/rC8KQd+3ujc0BeDoyUM91
+        tvJWfcHjznWtOmpROIlSSlRXs68QtWA1Iqg+PuVyvchsNhulFbh9Ae9MwbmqwPmHCnV1Rg6Ys0eB6y6H
+        gkALyqKQoigBY0uJmn3Goiy1YDkUcEAoOM3ncjyexDItMYlldtHSPcs0W8FyIOBkUZDluWRZJrkGOWvd
+        a/vHYz4iwGBQkKSJpGmKSJAnjzxFP4Ek1QLbcfoC319rwdf7m8SHgxhTQwzDkClhDnRErQW2PRR4WhBF
+        kcRRrGObI8a/8RDHrwUcTQr+CQSLvoCj6WK6XNcV/kX8SA7BXTV4o2M7wjdz82LxOIFMvgFeiESq3Y6F
+        zAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="FORMAT_ERROR_MSG" xml:space="preserve">
+    <value>The value should be between {0:G} and {1:G}.</value>
+  </data>
+  <data name="PAGE_TITLE_CUSTOMCHARS" xml:space="preserve">
+    <value>Custom Characters</value>
+  </data>
+  <data name="EMPTY_NAME_MSG" xml:space="preserve">
+    <value>The name cannot be an empty string.</value>
+  </data>
+  <data name="QUESTION_MSG_TITLE" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="ERROR_MSG_TITLE" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="USE_DEFAULT_CHAR_LIST_MSG" xml:space="preserve">
+    <value>Are you sure you want to use default chars list?</value>
+  </data>
+  <data name="imopen" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6
+        JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAACXBIWXMAAAsMAAALDAE/QCLIAAACeUlE
+        QVQ4T6WSWUiUURiG/4suurJIjUIwskQsEAMjqosQpUVNKbdCSRPKrQVDMddmXEedGdcpFXNGnUYdrSzF
+        sEIoFInQcqHE1CwoKsXUUMnt6XfEye0munjgnO+c9+HjO0cA/osNi2tJLdA6SXN13MwoI12lJ06uiV8+
+        W3d5IwIjVXiGKvwX11djSs2TRFlUito7ILIAoVab7SvCWhqrZYq1omXC4gpPe4Ur8AjNMQjo69IwPVZj
+        4PeojtlhNfoyBXXalKSNBJ5hSjxCcnELzkeoKVcyNVq5Kjz/rZDZnggqSzOoKEpDXZBEcU4id+Sx5Mui
+        RcdfmVClyWLqh8YYXhDD9MVCT/CGrBPcK5Hx62uxMdxUm2XgiT6Tep2MhxVp6NXJ6IqllKlucTc3niJl
+        LKqsGINMqChOY+JTnqHtwRYJdZVK5gelMJSymo9ibSAOeiPhXTid1T5cD3IvF9SqZMb7M+CznEdVCtqe
+        ypcurWz9bQC0ezHX6sr0M0c+lNtx5cKJcVGwXyjJlfDzvZSh1gTqdHIWBiTQHbIU7AwSg+eYa3Nnuvk4
+        E41HGak9gDTUmvPOZjmGGRQqExjpiuG+NouOl2InvRGi4BJ0+LPw6gwzL04x2XSM0ToHvlfZ0p66FT9X
+        KxxsTGwMAlVmLN3NiTzQZkJ/IrwR233tzUyLG5PPHRmrP8Sw3o4vmr30yE2RBO/Bfp9Fg/EV8tKjqSnL
+        oOdxGO3ZgpE2+SaaZZtpSNpCdbw56mgLbt/YhZ/L7oVD9pYuRkF2ShTZksukxwQSd813cbJc9HHm7MnD
+        OB2x46CdNbZWFljuNGP7NhN2mJqIuRX/YOXm30H4A70P0TsBWkcYAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="imundo" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6
+        JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAACXBIWXMAAAsMAAALDAE/QCLIAAAB+ElE
+        QVQ4T2P4//8/RRirIAxP3vItZvLmrzvm7f76aPnBr0dWHvw6ZdWhr1LIalA0IOO+DV93APGf7nVfnzeu
+        +PK4fsmXO3N3fn0MNOATsiFwDd2rXv1fduKrAZi97uuy/o3ffqdOevfGpeDEb+vU7X/ME7Z8d6+4+3Hm
+        9q9vgAbcRDEAKMDZuOTl/3kHvl6tX/G1YcKmb3/iep7/cy04/t8uY/cv09g1x13ytz60jF/+J6zj3c+l
+        B77eRzEAhItnPv+fNevz/8I5X/5H9nx8YZW85a9F4oYfprEr80HyAbXbVQwjFr9wLb/9vmHplz0YBiT1
+        Pfvv3fTmf3Tv5/9lc9781/CetNokZoUjTF7BoY7ZLuvQb9eyO68bVn45BBOHGxDU/PS/WfH9/55Nr8Au
+        Sex59L9u8VtLmDzQAFa7zEN/veqefWte+WULTBxugFPF4/8ORdf+W2Ue/28Sv+2/YdTa/xo+U4FSEHmz
+        uPVKtpkH/wW0vP5bMP1xKUwcbgA6BgUsMl/da5K7a9ntP2mT3//r3fCVDSYOV0AIW6TsuxjS8eFfWN35
+        XGRxFEXYcFzfeyWH/Asx/i0f/vlVXvmmFTCbEVkeRTE27FH92Nm/5dMvj5KLP42jVnmhy6NwsOGo3s+R
+        ziXXGk1j1olik8cQIBVjFSQe/2cAAG4MzKZBtgOMAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="PAGE_TITLE_BUILTIN" xml:space="preserve">
+    <value>Built-in</value>
+  </data>
+  <data name="PRINT_ERROR" xml:space="preserve">
+    <value>Print error occured.</value>
+  </data>
+  <data name="DRC_CLOCK_ERR" xml:space="preserve">
+    <value>Clock frequency value was changed. Open the Configure dialog in order to update related parameters values.</value>
+  </data>
+  <data name="EMPTY_FRAMERATE_LIST" xml:space="preserve">
+    <value>Clock frequency is too high to set the correct value of SUBFR_DIV divisor and generate a proper refresh rate</value>
+  </data>
+  <data name="InterconnectTabDisplayName" xml:space="preserve">
+    <value>Interconnect</value>
+  </data>
+  <data name="EnumBias_12" xml:space="preserve">
+    <value>1/2 Bias</value>
+  </data>
+  <data name="EnumBias_13" xml:space="preserve">
+    <value>1/3 Bias</value>
+  </data>
+  <data name="EnumBias_14" xml:space="preserve">
+    <value>1/4 Bias</value>
+  </data>
+  <data name="EnumBias_15" xml:space="preserve">
+    <value>1/5 Bias</value>
+  </data>
+  <data name="EnumDrivingModeDigitalCorrelation" xml:space="preserve">
+    <value>Digital correlation</value>
+  </data>
+  <data name="EnumDrivingModePWM" xml:space="preserve">
+    <value>PWM</value>
+  </data>
+  <data name="EnumLCDModeHighSpeed" xml:space="preserve">
+    <value>High speed</value>
+  </data>
+  <data name="EnumLCDModeLowSpeed" xml:space="preserve">
+    <value>Low speed</value>
+  </data>
+  <data name="EnumWaveformTypeA" xml:space="preserve">
+    <value>Type A</value>
+  </data>
+  <data name="EnumWaveformTypeB" xml:space="preserve">
+    <value>Type B</value>
+  </data>
+  <data name="DRC_NUMBER_OF_COMMONS_ERROR" xml:space="preserve">
+    <value>Selected number of Commons in the component customizer is greater than max number of Commons supported by the selected device. Open the Configure dialog in order to update related parameters values.</value>
+  </data>
+  <data name="DRC_NUMBER_OF_SEGMENTS_ERROR" xml:space="preserve">
+    <value>Selected number of Segments in the component customizer is greater than max number of Segments supported by the selected device. Open the Configure dialog in order to update related parameters values.</value>
+  </data>
+  <data name="NUMBER_OF_COMMONS_ERROR" xml:space="preserve">
+    <value>Selected number of Commons is greater than max number of Commons supported by the selected device.</value>
+  </data>
+  <data name="NUMBER_OF_SEGMENTS_ERROR" xml:space="preserve">
+    <value>Selected number of Segments is greater than max number of Segments supported by the selected device.</value>
+  </data>
+</root>
