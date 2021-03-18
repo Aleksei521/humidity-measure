@@ -37,6 +37,12 @@
 #define MIN_BAT 3000l
 #define MAX_BAT 4200l
 #define BAT_STEP ((MAX_BAT- MIN_BAT)/8l)
+#define TEMPERATURE_0 0
+#define TEMPERATURE_25 25
+#define LOW_CONTRAST_LCD 30
+#define MIDLE_CONTRAST_LCD 40
+#define HIGH_CONTRAST_LCD 50
+
 struct {
     uint16 ch0;
     uint16 ch1;
@@ -283,24 +289,24 @@ int main(void)
         show_bat(((int32)(adc_result.bat)-MIN_BAT)/BAT_STEP);
         start_measure_ds18();
         adc_result.temperature=convert_temperature(temperature)/10000;
-        if(adc_result.temperature<0 && contrast!=50)
+        if(adc_result.temperature<TEMPERATURE_0 && contrast!=HIGH_CONTRAST_LCD)
         {
-            contrast=50;
-            LCD_Seg_1_SetContrast(50);
+            contrast=HIGH_CONTRAST_LCD;
+            LCD_Seg_1_SetContrast(HIGH_CONTRAST_LCD);
         }
         else
         {
-            if(adc_result.temperature>=0 && adc_result.temperature<=25 && contrast!=40)
+            if(adc_result.temperature>=TEMPERATURE_0 && adc_result.temperature<=TEMPERATURE_25 && contrast!=MIDLE_CONTRAST_LCD)
             {
-                contrast=40;
-                LCD_Seg_1_SetContrast(40);
+                contrast=MIDLE_CONTRAST_LCD;
+                LCD_Seg_1_SetContrast(MIDLE_CONTRAST_LCD);
             }
             else
             {
-                if(adc_result.temperature>25 && contrast!=30)
+                if(adc_result.temperature>TEMPERATURE_25 && contrast!=LOW_CONTRAST_LCD)
                 {
-                    contrast=30;
-                    LCD_Seg_1_SetContrast(30);
+                    contrast=LOW_CONTRAST_LCD;
+                    LCD_Seg_1_SetContrast(LOW_CONTRAST_LCD);
                 }
             }
         }
