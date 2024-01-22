@@ -43,14 +43,16 @@
 #define MIDLE_CONTRAST_LCD 40
 #define HIGH_CONTRAST_LCD 50
 
+#define NUM_AVG 64
 struct {
-    uint16 ch0;
-    uint16 ch1;
+    uint32 ch0;
+    uint32 ch1;
     uint32 rh;
     uint32 bat;
     uint8 eoc;
     int16 temperature;
-} volatile adc_result={0,0,0,0,0,25};
+    uint16_t avg_cnt;
+} volatile adc_result={0,0,0,0,0,25,0};
 #define BUTTON_PRESS_CNT 4
 #define BUTTON_LONG_PRESS_CNT 138
 #define BLINKING_CNT 14
@@ -185,13 +187,23 @@ CY_ISR(ADC_HANDLER)
 {
 uint32 intr_status;
 intr_status = ADC_SAR_Seq_1_SAR_INTR_REG;
-    adc_result.ch0 = ADC_SAR_Seq_1_GetResult16(0);
-    adc_result.ch1 = ADC_SAR_Seq_1_GetResult16(1);
-    adc_result.rh=((adc_result.ch0*1000000ul)/4096ul-RH_SHIFT)/RH_SLOPE;
-    int32 rh=((int32)adc_result.rh*1000000l)/(T_SHIFT-T_SLOPE*adc_result.temperature);
-    adc_result.rh=(uint32)rh;
-    adc_result.bat=adc_result.ch1*ADC_STEP/1000l;//mV
-    adc_result.eoc=1;
+    adc_result.ch0 += ADC_SAR_Seq_1_GetResult16(0);
+    adc_result.ch1 += ADC_SAR_Seq_1_GetResult16(1);
+    if(adc_result.avg_cnt != NUM_AVG - 1){
+        adc_result.avg_cnt++; 
+    }
+    else{
+        adc_result.avg_cnt = 0;
+        adc_result.ch0 /= NUM_AVG;
+        adc_result.ch1 /= NUM_AVG;
+        adc_result.rh=((adc_result.ch0*1000000ul)/4096ul-RH_SHIFT)/RH_SLOPE;
+        int32 rh=((int32)adc_result.rh*1000000l)/(T_SHIFT-T_SLOPE*adc_result.temperature);
+        adc_result.rh=(uint32)rh;
+        adc_result.bat=adc_result.ch1*ADC_STEP/1000l;//mV
+        adc_result.ch0 = 0;
+        adc_result.ch1 = 0;
+        adc_result.eoc=1;
+    }
 ADC_SAR_Seq_1_SAR_INTR_REG = intr_status;
 }
 
@@ -219,6 +231,9 @@ int main(void)
     LCD_Seg_1_ClearDisplay();
     pwr_en_Write(1);
     adc_result.eoc=0;
+    adc_result.ch0 = 0;
+    adc_result.ch1 = 0;
+    adc_result.avg_cnt = 0;
     if(CySysWdtGetEnabledStatus(CY_SYS_WDT_COUNTER0_RESET)==0)
     {
         CySysWdtSetMode(CY_SYS_WDT_COUNTER0,CY_SYS_WDT_MODE_RESET);
@@ -241,6 +256,7 @@ int main(void)
         LCD_Seg_1_WritePixel(LCD_Seg_1_H7SEG7_F,LCD_Seg_1_PIXEL_STATE_ON);
     }
     start_measure_ds18();
+    ADC_SAR_Seq_1_StartConvert();
     CySysWdtResetCounters(CY_SYS_WDT_COUNTER0_RESET);
     CyDelay(1000);
     CySysWdtResetCounters(CY_SYS_WDT_COUNTER0_RESET);
@@ -282,35 +298,34 @@ int main(void)
             display_error(7);
             reset_uart();
         }
-        ADC_SAR_Seq_1_StartConvert();
-        while(!adc_result.eoc);
-        adc_result.eoc=0;
-        show_rh(adc_result.rh);
-        show_bat(((int32)(adc_result.bat)-MIN_BAT)/BAT_STEP);
-        start_measure_ds18();
-        adc_result.temperature=convert_temperature(temperature)/10000;
-        if(adc_result.temperature<TEMPERATURE_0 && contrast!=HIGH_CONTRAST_LCD)
-        {
-            contrast=HIGH_CONTRAST_LCD;
-            LCD_Seg_1_SetContrast(HIGH_CONTRAST_LCD);
-        }
-        else
-        {
-            if(adc_result.temperature>=TEMPERATURE_0 && adc_result.temperature<=TEMPERATURE_25 && contrast!=MIDLE_CONTRAST_LCD)
+        if(adc_result.eoc){
+            adc_result.eoc=0;
+            show_rh(adc_result.rh);
+            show_bat(((int32)(adc_result.bat)-MIN_BAT)/BAT_STEP);
+            start_measure_ds18();
+            adc_result.temperature=convert_temperature(temperature)/10000;
+            if(adc_result.temperature<TEMPERATURE_0 && contrast!=HIGH_CONTRAST_LCD)
             {
-                contrast=MIDLE_CONTRAST_LCD;
-                LCD_Seg_1_SetContrast(MIDLE_CONTRAST_LCD);
+                contrast=HIGH_CONTRAST_LCD;
+                LCD_Seg_1_SetContrast(HIGH_CONTRAST_LCD);
             }
             else
             {
-                if(adc_result.temperature>TEMPERATURE_25 && contrast!=LOW_CONTRAST_LCD)
+                if(adc_result.temperature>=TEMPERATURE_0 && adc_result.temperature<=TEMPERATURE_25 && contrast!=MIDLE_CONTRAST_LCD)
                 {
-                    contrast=LOW_CONTRAST_LCD;
-                    LCD_Seg_1_SetContrast(LOW_CONTRAST_LCD);
+                    contrast=MIDLE_CONTRAST_LCD;
+                    LCD_Seg_1_SetContrast(MIDLE_CONTRAST_LCD);
+                }
+                else
+                {
+                    if(adc_result.temperature>TEMPERATURE_25 && contrast!=LOW_CONTRAST_LCD)
+                    {
+                        contrast=LOW_CONTRAST_LCD;
+                        LCD_Seg_1_SetContrast(LOW_CONTRAST_LCD);
+                    }
                 }
             }
-        }
-                
+        }                
     }
 }
 
@@ -455,7 +470,10 @@ void show_temperature(int16 temperature)
 
 uint32 convert_temperature(int16 temperature)
 {
-    return labs((int32)temperature)*(int32)625;
+    if(temperature < 0){
+        temperature *=-1;
+    }
+    return (int32)temperature*(int32)625;
 }
 
 void show_bat(int32 bat_mV)
